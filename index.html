@@ -2,17 +2,15 @@
 <html lang="bn">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="theme-color" content="#050505">
     <meta name="description" content="BD AppList — বাংলাদেশের প্রয়োজনীয় অ্যাপ এক জায়গায়">
-    <title>BD AppList - Download</title>
-    
+    <title>BD AppList - Download App</title>
     <style>
         * { box-sizing: border-box; }
         :root {
             --bg: #050505;
-            --panel: rgba(255, 255, 255, 0.075);
-            --line: rgba(255, 255, 255, 0.14);
+            --line: rgba(255,255,255,.14);
             --text: #fff;
             --muted: #a8a8a8;
         }
@@ -23,8 +21,6 @@
             color: var(--text);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
         body:before {
             content: "";
@@ -34,15 +30,12 @@
             background: linear-gradient(120deg, rgba(255,255,255,.035), transparent 35%, rgba(255,255,255,.02));
             z-index: -1;
         }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
         a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; height: auto; }
-
-        .shell {
-            width: min(1000px, 100%);
-            margin: 0 auto;
-            padding: 40px 20px;
-            flex: 1;
-        }
+        
+        .shell { width: min(960px, 100%); margin: auto; padding: 20px 14px 60px; }
+        
         .glass {
             background: linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.035));
             border: 1px solid var(--line);
@@ -51,177 +44,150 @@
             -webkit-backdrop-filter: blur(22px);
             border-radius: 25px;
         }
+        
+        .topbar {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 22px;
+            gap: 15px;
+        }
+        .logo {
+            width: 55px; height: 55px; border-radius: 16px; object-fit: cover;
+            background: #fff; box-shadow: 0 0 0 1px #fff2, 0 8px 25px #000;
+        }
+        .brand-text h1 { font-size: 22px; margin: 0; font-weight: 850; letter-spacing: -.3px; }
+        .brand-text p { color: var(--muted); margin: 3px 0 0; font-size: 13px; }
 
         .hero {
-            padding: 50px 30px;
             text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 40px;
             position: relative;
             overflow: hidden;
-            margin-bottom: 40px;
         }
         .hero:after {
-            content: "";
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            right: -100px;
-            top: -100px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            filter: blur(35px);
-            pointer-events: none;
+            content: ""; position: absolute; width: 250px; height: 250px;
+            right: -100px; top: -100px; border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05); filter: blur(35px); pointer-events: none;
         }
-        .app-logo {
-            width: 96px;
-            height: 96px;
-            border-radius: 24px;
-            object-fit: cover;
-            background: #fff;
-            box-shadow: 0 0 0 1px rgba(255,255,255,0.2), 0 12px 30px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
-        }
-        .hero h1 {
-            font-size: 42px;
-            margin: 0 0 10px;
-            font-weight: 850;
-            letter-spacing: -1px;
-        }
-        .hero h2 {
-            font-size: 22px;
-            color: #ccc;
-            margin: 0 0 16px;
-            font-weight: 500;
-        }
-        .hero p {
-            margin: 0 auto 30px;
-            color: var(--muted);
-            line-height: 1.65;
-            font-size: 16px;
-            max-width: 600px;
-        }
-
-        .download-glow {
+        .hero h2 { font-size: 38px; line-height: 1.1; margin: 0 0 15px; letter-spacing: -1px; }
+        .hero p { color: #ccc; line-height: 1.6; font-size: 16px; max-width: 600px; margin: 0 auto 30px; }
+        
+        .download-btn {
             display: inline-block;
             position: relative;
             overflow: hidden;
             border: 1px solid #fff;
             background: #fff;
             color: #000;
-            border-radius: 18px;
+            border-radius: 16px;
             padding: 16px 32px;
             font-size: 18px;
             font-weight: 850;
-            box-shadow: 0 0 12px #fff, 0 0 30px rgba(255,255,255,.55), 0 0 50px rgba(255,255,255,.18);
+            box-shadow: 0 0 15px rgba(255,255,255,0.4), 0 0 35px rgba(255,255,255,0.2);
             animation: glow 2.2s ease-in-out infinite;
             transition: transform 0.2s;
         }
-        .download-glow:hover {
-            transform: scale(1.05);
-        }
-        .download-glow:after {
-            content: "";
-            position: absolute;
-            inset: 0;
+        .download-btn:hover { transform: scale(1.05); }
+        .download-btn:after {
+            content: ""; position: absolute; inset: 0;
             background: linear-gradient(110deg, transparent 20%, rgba(0,0,0,.12), transparent 70%);
             transform: translateX(-120%);
             animation: sweep 3.2s infinite;
         }
-        @keyframes glow { 50% { box-shadow: 0 0 16px #fff, 0 0 40px rgba(255,255,255,.7), 0 0 65px rgba(255,255,255,.2); } }
+        @keyframes glow { 50% { box-shadow: 0 0 20px rgba(255,255,255,0.6), 0 0 45px rgba(255,255,255,0.3); } }
         @keyframes sweep { 55%, 100% { transform: translateX(130%); } }
 
-        .section-head {
-            text-align: center;
-            margin: 40px 0 20px;
-        }
-        .section-head h3 {
-            font-size: 26px;
-            margin: 0;
-            font-weight: 700;
-        }
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 10px;
-        }
-        .mockup-wrapper {
-            border-radius: 24px;
-            padding: 10px;
+        .section-title { font-size: 24px; text-align: center; margin: 40px 0 20px; font-weight: 700; }
+
+        .mockups {
             display: flex;
+            gap: 20px;
             justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .mockups img {
+            width: 260px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             transition: transform 0.3s ease;
         }
-        .mockup-wrapper:hover {
-            transform: translateY(-5px);
-        }
-        .mockup-img {
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            max-width: 100%;
-            height: auto;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            border-top: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 14px;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: underline;
-            margin: 0 10px;
-        }
+        .mockups img:hover { transform: translateY(-10px); }
 
-        @media(max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero h2 { font-size: 18px; }
-            .download-glow { padding: 14px 24px; font-size: 16px; }
-            .screenshots-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .legal-card { padding: 25px; }
+        .legal-card h3 { margin: 0 0 15px; font-size: 18px; color: #fff; }
+        .legal-card p { font-size: 14px; color: #bbb; line-height: 1.7; margin: 0 0 10px; }
+        .legal-card a { color: #7dbbff; text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 30px; }
+            .legal-grid { grid-template-columns: 1fr; }
+            .mockups img { width: 100%; max-width: 280px; }
         }
     </style>
 </head>
 <body>
 
 <main class="shell">
+    
+    <!-- Topbar -->
+    <header class="glass topbar">
+        <img class="logo" src="https://pockethostbd.github.io/drive-one/picture/bd-app-list-logo.png" alt="BD AppList Logo">
+        <div class="brand-text">
+            <h1>BD AppList</h1>
+            <p>বাংলাদেশের প্রয়োজনীয় অ্যাপ এক জায়গায়</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
     <section class="glass hero">
-        <img class="app-logo" src="https://pockethostbd.github.io/drive-one/picture/bd-applist-logo.png" alt="BD AppList Logo" onerror="this.src='https://placehold.co/96x96/000/fff?text=BD'">
-        <h1>BD AppList</h1>
-        <h2>বাংলাদেশের প্রয়োজনীয় অ্যাপ এক জায়গায়</h2>
-        <p>BD AppList হলো বাংলাদেশের ব্যবহারকারীদের জন্য তৈরি একটি ডিজিটাল অ্যাপ ডিরেক্টরি। আপনার দৈনন্দিন জীবনের প্রয়োজনীয় সব অ্যাপগুলো এখন এক ছাতার নিচে। আজই ডাউনলোড করুন এবং উপভোগ করুন সহজ ও সুন্দর অভিজ্ঞতা।</p>
-        
-        <a href="https://github.com/pockethostbd/BD-AppList/releases/download/V1.0.0/BD.App.List.apk" class="download-glow">
-            ↓ Download APK (v1.0.0)
+        <h2>Find the Best Bangladeshi Apps Easily</h2>
+        <p>BD AppList অ্যাপটি ডাউনলোড করে খুব সহজেই বাংলাদেশের প্রয়োজনীয় এবং জনপ্রিয় সকল অ্যাপ ব্রাউজ করুন আপনার মোবাইল থেকে।</p>
+        <a href="https://github.com/pockethostbd/BD-AppList/releases/download/V1.0.0/BD.App.List.apk" class="download-btn">
+            ↓ Download APK (V1.0.0)
         </a>
     </section>
 
-    <div class="section-head">
-        <h3>App Screenshots</h3>
+    <!-- Mockups Section -->
+    <h2 class="section-title">App Screenshots</h2>
+    <div class="mockups">
+        <img src="https://pockethostbd.github.io/BD-AppList/mockup-1.jpg" alt="BD AppList Mockup 1">
+        <img src="https://pockethostbd.github.io/BD-AppList/mockup-2.jpg" alt="BD AppList Mockup 2">
+        <img src="https://pockethostbd.github.io/BD-AppList/mockup-3.jpg" alt="BD AppList Mockup 3">
     </div>
-    
-    <div class="screenshots-grid">
-        <div class="glass mockup-wrapper">
-            <img class="mockup-img" src="https://pockethostbd.github.io/BD-AppList/mockup-1.jpg" alt="App Mockup 1">
-        </div>
-        <div class="glass mockup-wrapper">
-            <img class="mockup-img" src="https://pockethostbd.github.io/BD-AppList/mockup-2.jpg" alt="App Mockup 2">
-        </div>
-        <div class="glass mockup-wrapper">
-            <img class="mockup-img" src="https://pockethostbd.github.io/BD-AppList/mockup-3.jpg" alt="App Mockup 3">
-        </div>
-    </div>
-</main>
 
-<footer class="footer">
-    <p>&copy; 2026 BD AppList. All rights reserved.</p>
-    <p>
-        <a href="terms.html">Terms of Use</a>
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
-</footer>
+    <!-- Legal Section -->
+    <h2 class="section-title">Legal & Policies</h2>
+    <div class="legal-grid">
+        
+        <!-- Terms of Use -->
+        <div class="glass legal-card">
+            <h3>Terms of Use</h3>
+            <p>BD AppList একটি app directory[span_2](start_span)[span_2](end_span)। এখানে প্রকাশিত app-এর মালিকানা সংশ্লিষ্ট developer-এর[span_3](start_span)[span_3](end_span)। BD AppList কোনো app-এর developer, publisher বা Play Store-এর অংশ নয়[span_4](start_span)[span_4](end_span)।</p>
+            <p>ভুল, বিভ্রান্তিকর, বেআইনি বা অন্যের অধিকার লঙ্ঘনকারী submission অনুমোদন না করার অধিকার admin সংরক্ষণ করে[span_5](start_span)[span_5](end_span)。</p>
+            <p>যোগাযোগ: <a href="mailto:info.bdapplist@gmail.com">info.bdapplist@gmail.com</a>[span_6](start_span)[span_6](end_span)</p>
+        </div>
+
+        <!-- Privacy Policy -->
+        <div class="glass legal-card">
+            <h3>Privacy Policy</h3>
+            <p>BD AppList ব্যবহারকারীদের গোপনীয়তাকে সর্বোচ্চ গুরুত্ব দেয়। আমাদের অ্যাপ শুধুমাত্র পাবলিক ডিরেক্টরি ডেটা প্রদর্শন করে এবং ব্যবহারকারীর কোনো সংবেদনশীল ব্যক্তিগত তথ্য (Sensitive Personal Data) বিনা অনুমতিতে সংগ্রহ বা সংরক্ষণ করে না।</p>
+            <p>আমাদের অ্যাপের মাধ্যমে আপনি সরাসরি Google Play Store-এ রিডাইরেক্ট হবেন[span_7](start_span)[span_7](end_span), তাই অ্যাপ ডাউনলোডের ক্ষেত্রে প্লে স্টোরের প্রাইভেসি পলিসি প্রযোজ্য হবে।</p>
+            <p>যেকোনো প্রয়োজনে আমাদের সাথে মেইলে যোগাযোগ করতে পারেন।</p>
+        </div>
+    </div>
+
+</main>
 
 </body>
 </html>
