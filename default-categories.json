@@ -1,0 +1,212 @@
+{
+  "art-design": {
+    "name": "Art & Design",
+    "nameBn": "আর্ট ও ডিজাইন",
+    "active": true,
+    "order": 1
+  },
+  "auto-vehicles": {
+    "name": "Auto & Vehicles",
+    "nameBn": "অটো ও যানবাহন",
+    "active": true,
+    "order": 2
+  },
+  "beauty": {
+    "name": "Beauty",
+    "nameBn": "সৌন্দর্য",
+    "active": true,
+    "order": 3
+  },
+  "books-reference": {
+    "name": "Books & Reference",
+    "nameBn": "বই ও রেফারেন্স",
+    "active": true,
+    "order": 4
+  },
+  "business": {
+    "name": "Business",
+    "nameBn": "ব্যবসা",
+    "active": true,
+    "order": 5
+  },
+  "comics": {
+    "name": "Comics",
+    "nameBn": "কমিকস",
+    "active": true,
+    "order": 6
+  },
+  "communication": {
+    "name": "Communication",
+    "nameBn": "যোগাযোগ",
+    "active": true,
+    "order": 7
+  },
+  "education": {
+    "name": "Education",
+    "nameBn": "শিক্ষা",
+    "active": true,
+    "order": 8
+  },
+  "entertainment": {
+    "name": "Entertainment",
+    "nameBn": "বিনোদন",
+    "active": true,
+    "order": 9
+  },
+  "events": {
+    "name": "Events",
+    "nameBn": "ইভেন্ট",
+    "active": true,
+    "order": 10
+  },
+  "finance": {
+    "name": "Finance",
+    "nameBn": "অর্থ ও ফাইন্যান্স",
+    "active": true,
+    "order": 11
+  },
+  "food-drink": {
+    "name": "Food & Drink",
+    "nameBn": "খাবার ও পানীয়",
+    "active": true,
+    "order": 12
+  },
+  "health-fitness": {
+    "name": "Health & Fitness",
+    "nameBn": "স্বাস্থ্য ও ফিটনেস",
+    "active": true,
+    "order": 13
+  },
+  "house-home": {
+    "name": "House & Home",
+    "nameBn": "বাড়ি ও ঘর",
+    "active": true,
+    "order": 14
+  },
+  "kids": {
+    "name": "Kids",
+    "nameBn": "শিশু",
+    "active": true,
+    "order": 15
+  },
+  "libraries-demo": {
+    "name": "Libraries & Demo",
+    "nameBn": "লাইব্রেরি ও ডেমো",
+    "active": true,
+    "order": 16
+  },
+  "lifestyle": {
+    "name": "Lifestyle",
+    "nameBn": "লাইফস্টাইল",
+    "active": true,
+    "order": 17
+  },
+  "maps-navigation": {
+    "name": "Maps & Navigation",
+    "nameBn": "মানচিত্র ও নেভিগেশন",
+    "active": true,
+    "order": 18
+  },
+  "medical": {
+    "name": "Medical",
+    "nameBn": "মেডিকেল",
+    "active": true,
+    "order": 19
+  },
+  "music-audio": {
+    "name": "Music & Audio",
+    "nameBn": "মিউজিক ও অডিও",
+    "active": true,
+    "order": 20
+  },
+  "news-magazines": {
+    "name": "News & Magazines",
+    "nameBn": "নিউজ ও ম্যাগাজিন",
+    "active": true,
+    "order": 21
+  },
+  "parenting": {
+    "name": "Parenting",
+    "nameBn": "প্যারেন্টিং",
+    "active": true,
+    "order": 22
+  },
+  "personalization": {
+    "name": "Personalization",
+    "nameBn": "পার্সোনালাইজেশন",
+    "active": true,
+    "order": 23
+  },
+  "photography": {
+    "name": "Photography",
+    "nameBn": "ফটোগ্রাফি",
+    "active": true,
+    "order": 24
+  },
+  "productivity": {
+    "name": "Productivity",
+    "nameBn": "প্রোডাক্টিভিটি",
+    "active": true,
+    "order": 25
+  },
+  "shopping": {
+    "name": "Shopping",
+    "nameBn": "শপিং",
+    "active": true,
+    "order": 26
+  },
+  "social": {
+    "name": "Social",
+    "nameBn": "সোশ্যাল",
+    "active": true,
+    "order": 27
+  },
+  "sports": {
+    "name": "Sports",
+    "nameBn": "স্পোর্টস",
+    "active": true,
+    "order": 28
+  },
+  "tools": {
+    "name": "Tools",
+    "nameBn": "টুলস",
+    "active": true,
+    "order": 29
+  },
+  "travel-local": {
+    "name": "Travel & Local",
+    "nameBn": "ভ্রমণ ও স্থানীয়",
+    "active": true,
+    "order": 30
+  },
+  "video-players-editors": {
+    "name": "Video Players & Editors",
+    "nameBn": "ভিডিও প্লেয়ার ও এডিটর",
+    "active": true,
+    "order": 31
+  },
+  "weather": {
+    "name": "Weather",
+    "nameBn": "আবহাওয়া",
+    "active": true,
+    "order": 32
+  },
+  "games": {
+    "name": "Games",
+    "nameBn": "গেমস",
+    "active": true,
+    "order": 33
+  },
+  "government-public-services": {
+    "name": "Government & Public Services",
+    "nameBn": "সরকারি ও জনসেবা",
+    "active": true,
+    "order": 34
+  },
+  "other": {
+    "name": "Other",
+    "nameBn": "অন্যান্য",
+    "active": true,
+    "order": 35
+  }
+}
